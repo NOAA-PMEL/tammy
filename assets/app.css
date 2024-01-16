@@ -1,0 +1,215 @@
+/*
+  Styles to be exported with the generated Dash apps.
+*/
+
+:root {
+  --dash-surface-surface-tertiary: #dddddd;
+  --dash-surface-surface-secondary: #f1f1f1;
+  --dash-text-text-primary: #262626;
+  --dash-text-text-secondary: #595959;
+  --dash-interactive-primary: #da173d;
+  --dash-color-neutral-black: #000;
+}
+
+/* Repeating a rule that DDK has */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+  Control Panel styles
+*/
+.controlpanel {
+  background-color: var(--header_background_secondary);
+  color: var(--text-secondary-inverted);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  align-self: flex-start;
+}
+
+.controlpanel--primary {
+  display: flex;
+  align-items: center;
+}
+
+.controlpanel--primary--expandsecondary {
+  padding: 20px;
+  margin-top: 15px;
+}
+.controlpanel--primary--expandsecondary button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  line-height: 20px;
+  border: none;
+  color: white;
+  background-color: var(--header_background);
+  font-size: 32px;
+}
+
+.controlpanel--content {
+  display: flex;
+  justify-content: start;
+  width: calc(100% - 40px);
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.controlpanel--content--item:not(:last-child) {
+  padding-right: 20px;
+}
+.controlpanel--content--item {
+  width: 100%;
+  max-width: 250px;
+  flex: 1;
+}
+.controlpanel--content--item label {
+  font-size: 90%;
+}
+.controlpanel--content--item input,
+.controlpanel--content--item select {
+  width: 100%;
+  height: 20px;
+  border-radius: 1px;
+  border: none;
+  margin-top: 5px;
+}
+
+.controlpanel--content--item label {
+  display: block;
+}
+
+/*
+  Section layouts
+*/
+.section {
+  padding-inline: 32px;
+  padding-block: 16px;
+}
+
+.section-layout {
+  display: grid;
+}
+
+.section-layout.s1 {
+  grid-template-columns: 100%;
+}
+
+.section-layout.s2 {
+  grid-template-columns: 50% 50%;
+}
+
+.section-layout.s1-4--3-4 {
+  grid-template-columns: 25% 75%;
+}
+
+.section-layout.s3-4--1-4 {
+  grid-template-columns: 75% 25%;
+}
+
+.section-layout.s1-3--2-3 {
+  grid-template-columns: 33.3% 66.6%;
+}
+
+.section-layout.s2-3--1-3 {
+  grid-template-columns: 66.6% 33.3%;
+}
+
+.section-layout.s3 {
+  grid-template-columns: 33% 33% 33%;
+}
+
+.section-layout.s1-2--1-4--1-4 {
+  grid-template-columns: 50% 25% 25%;
+}
+
+.section-layout.s1-4--1-4--1-2 {
+  grid-template-columns: 25% 25% 50%;
+}
+
+.section-layout.s1-4--1-2--1-4 {
+  grid-template-columns: 25% 50% 25%;
+}
+
+.section-layout.s4 {
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.section-layout.s5 {
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+/* Section Styling and DDK Overrides */
+
+.appcontent {
+  padding-block: 32px;
+}
+
+.control-in-card_container {
+  margin-left: initial !important;
+}
+
+.card-header {
+  padding-left: 0px !important;
+}
+
+.card-footer {
+  padding-left: 0px !important;
+  font-size: 14px;
+}
+
+.ddk-container .section--info {
+  display: flex;
+  max-width: 800px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  margin-bottom: 24px;
+}
+
+.ddk-container .section--title {
+  margin-inline: 16px;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 40px */
+}
+
+.ddk-container .section--description {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.08px;
+  padding-inline: 18px;
+}
+
+.ddk-container #DashEnterpriseHeader {
+  background-color: var(--dash-color-neutral-black);
+}
+
+/*
+  Component style overrides
+*/
+.ddk-container .ag-root-wrapper.ag-layout-normal {
+  border: none;
+  margin: -5px;
+}
+
+.ddk-container .ag-header-cell-resize {
+  z-index: 1;
+}
