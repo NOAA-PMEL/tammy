@@ -1,4 +1,4 @@
---extra-index-url=https://packages.plot.ly/l/ZXsdJITwCpGpNMKFUxUoz0A4pkLoHhqZ
+--extra-index-url=https://packages.plot.ly/l/ZXsdJITwCpGpNMKFUxUoz0A4pkLoHhqZ/preview
 Flask==2.0.3
 Jinja2==3.0.3
 MarkupSafe==2.0.1
@@ -28,7 +28,6 @@ dash-design-kit==1.10.0
 dash-enterprise-auth==0.2.1
 dash-enterprise==1.0.0
 dash==2.14.2
-dataclasses==0.8
 de-client==1.2.2
 decorator==5.1.1
 deferred-import==0.1.0
@@ -60,7 +59,7 @@ nbformat==5.1.3
 nest-asyncio==1.5.9
 notebook==6.4.10
 numpy==1.19.5
-packaging==20.9
+packaging==21.3
 pandas==1.1.5
 pandocfilters==1.5.0
 parso==0.7.1
